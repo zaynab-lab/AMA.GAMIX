@@ -48,7 +48,7 @@ export default function Products() {
           ) : (
             <div
               className="loadMore"
-              onClick={() => setItems((item) => item - 3)}
+              onClick={() => setItems((item) => item - 6)}
             >
               Show Less
             </div>
