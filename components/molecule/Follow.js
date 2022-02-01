@@ -1,14 +1,17 @@
 import { styles } from "@/public/js/styles";
 import Insta from "@/public/img/Insta";
+import dictionary from "@/public/js/dictionary";
 
-export default function Follow() {
+export default function Follow({ lang }) {
   return (
     <>
       <div>
         <div className="followSction">
           <div className="followContainer">
             <div className="text">
-              <div className="textFU"> Follow us</div>
+              <div className="textFU">
+                {lang === "En" ? dictionary.follow.En : dictionary.follow.Ar}
+              </div>
               <div className="textAMA"> ama.gamix</div>
             </div>
             <div className="FaInstagramItem">
@@ -35,14 +38,12 @@ export default function Follow() {
         .textFU {
           font-size: clamp(2.2rem, 5vw, 5rem);
           font-weight: 900;
-          text-align: left;
           background: -webkit-linear-gradient(90deg, #9e0fd5, #be21d3);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .textAMA {
           font-size: clamp(1.6rem, 3vw, 4rem);
-          text-align: left;
           color: #6f21d3;
         }
         .FaInstagramItem {

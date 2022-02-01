@@ -1,16 +1,19 @@
+import dictionary from "@/public/js/dictionary";
 import { styles } from "@/public/js/styles";
 
 const issues = [
-  { text: "WiFi issues", img: "wifi" },
-  { text: "Hardware issues", img: "hardware" },
-  { text: "Printer issues", img: "printer" }
+  { text: { En: "WiFi issues", Ar: "مشاكل الواي فاي" }, img: "wifi" },
+  { text: { En: "Hardware issues", Ar: "مشاكل القطع" }, img: "hardware" },
+  { text: { En: "Printer issues", Ar: "مشاكل الطابعة" }, img: "printer" }
 ];
 
-export default function FixIt() {
+export default function FixIt({ lang }) {
   return (
     <>
       <div className="fixItSection">
-        <h1 className="WeFixitItem">We fix it</h1>
+        <h1 className="WeFixitItem">
+          {lang === "En" ? dictionary.fixit.En : dictionary.fixit.Ar}
+        </h1>
         <div className="issuesContainer">
           {issues.map((issue, i) => (
             <div key={i} className="issue">
@@ -25,14 +28,14 @@ export default function FixIt() {
                   />
                 </div>
               </div>
-              <div className="issueTxt">{issue.text}</div>
+              <div className="issueTxt">{issue.text[lang]}</div>
             </div>
           ))}
         </div>
       </div>
       <style jsx>{`
         .fixItSection {
-          padding: calc(2rem + 6vw);
+          padding: calc(2rem + 6vw) 2rem;
           ${styles.flexAligncenter}
           ${styles.flexColumn};
           gap: calc(2rem + 3vw);
@@ -41,7 +44,7 @@ export default function FixIt() {
           width: 100%;
           max-width: 80rem;
           ${styles.flexAligncenter}
-          ${styles.spaceEvenly}
+          ${styles.justifyBetween}
         }
 
         .WeFixitItem {

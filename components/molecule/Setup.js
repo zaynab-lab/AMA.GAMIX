@@ -1,14 +1,19 @@
+import dictionary from "@/public/js/dictionary";
 import { styles } from "@/public/js/styles";
 
-export default function Setup() {
+export default function Setup({ lang }) {
   return (
     <>
       <div>
         <div className="setupSection">
           <div className="setupContainer">
             <div className="text">
-              <div className="textSU">We Setup the best space for you</div>
-              <div className="textWG">Work & Gaming</div>
+              <div className="textSU">
+                {lang === "En" ? dictionary.setup.En : dictionary.setup.Ar}
+              </div>
+              <div className="textWG">
+                {lang === "En" ? dictionary.work.En : dictionary.work.Ar}
+              </div>
             </div>
             <div className="imgContainer">
               <div className="imgItem">

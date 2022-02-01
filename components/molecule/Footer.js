@@ -8,7 +8,7 @@ export default function Footer() {
     <>
       <div className="footer">
         <Link href="https://wa.me/+971505601624">
-          <div className="WaButton">
+          <div className="footerWabtn">
             <WaButton />
           </div>
         </Link>
@@ -24,6 +24,9 @@ export default function Footer() {
           color: white;
           padding: 4vw;
           font-size: 4vw;
+        }
+        .footerWabtn {
+          padding: 2rem;
         }
         .footerlogo {
           max-width: 30%;

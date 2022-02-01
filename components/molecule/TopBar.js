@@ -1,15 +1,26 @@
 import { styles } from "@/public/js/styles";
-import { useState } from "react";
+import dictionary from "@/public/js/dictionary";
 
-export default function TopBar() {
-  const [lang, setLang] = useState("En");
+export default function TopBar({ lang, setLang }) {
   return (
     <>
       <div className="topBarContainer">
         <div className="barContainer">
           <div className="menuContainer">
-            <div className="menuItem">Products</div>
-            <div className="menuItem">Services</div>
+            <a href="#Products">
+              <div className="menuItem">
+                {lang === "En"
+                  ? dictionary.products.En
+                  : dictionary.products.Ar}
+              </div>
+            </a>
+            <a href="#Services">
+              <div className="menuItem">
+                {lang === "En"
+                  ? dictionary.services.En
+                  : dictionary.services.Ar}
+              </div>
+            </a>
           </div>
           <div
             className="switch"
@@ -26,7 +37,7 @@ export default function TopBar() {
         }
         .menuContainer {
           ${styles.flexAligncenter}
-          gap:clamp(1.2rem, 8vw, 3rem);
+          gap: 1.2rem;
           font-size: clamp(1.1rem, 3vw, 1.8rem);
         }
         .barContainer {
@@ -58,10 +69,18 @@ export default function TopBar() {
           background: ${styles.primaryColor};
         }
         .lang {
-          ${lang === "En" ? "padding-left: 0.6rem;" : "padding-right: 0.6rem;"}
+          padding-left: 0.6rem;
         }
         .menuItem {
           cursor: pointer;
+          padding: 0rem 0.8rem;
+          border-radius: 0.3rem;
+          padding-top: 0.1rem;
+          color: white;
+        }
+        .menuItem:hover {
+          color: ${styles.primaryColor};
+          background: white;
         }
       `}</style>
     </>

@@ -1,23 +1,42 @@
+import dictionary from "@/public/js/dictionary";
 import { styles } from "@/public/js/styles";
 
 const services = [
-  { text: "PC repairing & maintinance" },
-  { text: "Home network(WIFI, Printer...)" },
-  { text: "Laptop Fixing" },
-  { text: "Upgrade and Update (Hardware & software)" },
-  { text: "Providing varioscomputer accessories" }
+  {
+    text: { En: "PC repairing & maintinance", Ar: "اصلاح وصيانة الكمبيوترات" }
+  },
+  {
+    text: {
+      En: "Home network(WIFI, Printer...)",
+      Ar: "شبكات المنازل (واي فاي، طابعة،...)"
+    }
+  },
+  { text: { En: "Laptop Fixing", Ar: "تصليح لابتوبات" } },
+  {
+    text: {
+      En: "Upgrade and Update (Hardware & software)",
+      Ar: "تحديث و ترقية (الأجهزة والبرامج)"
+    }
+  },
+  {
+    text: {
+      En: "Providing various computer accessories",
+      Ar: "توفير ملحقات الكمبيوتر المختلفة"
+    }
+  }
 ];
 
-export default function Services() {
+export default function Services({ lang }) {
   return (
     <>
-      <div className="servicesComponent">
+      <div className="servicesComponent" id="Services">
         <div className="servicesContent">
-          Services
+          {lang === "En" ? dictionary.services.En : dictionary.services.Ar}
+
           <div className="servicesContainer">
             {services.map((service, i) => (
               <div key={i} className="service">
-                - {service.text}
+                - {service.text[lang]}
               </div>
             ))}
           </div>
@@ -39,7 +58,6 @@ export default function Services() {
         }
         .servicesContainer {
           font-size: clamp(0.8rem, 4vw, 3rem);
-          text-align: left;
           padding: 1rem;
           color: #bcf2ff;
           text-shadow: 2px 2px 12px #129dd2;

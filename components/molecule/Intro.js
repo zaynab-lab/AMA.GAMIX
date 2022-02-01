@@ -3,23 +3,28 @@ import Logo from "@/public/js/Logo";
 import TopBar from "./TopBar";
 import WaButton from "@/components/atom/WaButton";
 import Link from "next/link";
+import dictionary from "@/public/js/dictionary";
 
-export default function Intro() {
+export default function Intro({ lang, setLang }) {
   return (
     <>
       <div className="introContainer">
-        <TopBar />
+        <TopBar lang={lang} setLang={setLang} />
         <div className="logoContainer">
           <div className="logo">
             <Logo />
           </div>
         </div>
         <div className="textGroup">
-          <div className="textTP">You Have Technical Problems !!!</div>
-          <div className="textTH">We are here to help</div>
+          <div className="textTP">
+            {lang === "En" ? dictionary.problems.En : dictionary.problems.Ar}
+          </div>
+          <div className="textTH">
+            {lang === "En" ? dictionary.help.En : dictionary.help.Ar}
+          </div>
           <Link href="https://wa.me/+971505601624">
             <div className="WaButton">
-              <WaButton />
+              <WaButton lang={lang} />
             </div>
           </Link>
         </div>

@@ -1,6 +1,7 @@
 import { styles } from "@/public/js/styles";
 import Button from "@/components/atom/Button";
 import { useState } from "react";
+import dictionary from "@/public/js/dictionary";
 const products = [
   { name: "router one", img: "image", code: "1" },
   { name: "pink keyboard", img: "image", code: "2" },
@@ -9,13 +10,15 @@ const products = [
   { name: "black keyboard", img: "image", code: "5" },
   { name: "tp link", img: "image", code: "6" }
 ];
-export default function Products() {
+export default function Products({ lang }) {
   const [items, setItems] = useState(3);
   return (
     <>
-      <div className="productsComponent">
+      <div className="productsComponent" id="Products">
         <div className="productsComponentContent">
-          <div className="title">Products</div>
+          <div className="title">
+            {lang === "En" ? dictionary.products.En : dictionary.products.Ar}
+          </div>
           <div className="productsMainContainer">
             <div className="productsContainer">
               {products.slice(0, items).map((product, i) => (
@@ -31,7 +34,13 @@ export default function Products() {
                     </div>
                     {/* {product.name} */}
                     <div className="ButtonContainer">
-                      <Button name="Order now" />
+                      <Button
+                        name={
+                          lang === "En"
+                            ? dictionary.order.En
+                            : dictionary.order.Ar
+                        }
+                      />
                     </div>
                   </div>
                 </div>
@@ -43,7 +52,7 @@ export default function Products() {
               className="loadMore"
               onClick={() => setItems((item) => item + 3)}
             >
-              Load More
+              {lang === "En" ? dictionary.load.En : dictionary.load.Ar}
             </div>
           ) : (
             <div
@@ -79,7 +88,7 @@ export default function Products() {
 
         .productsContainer {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: repeat(auto-fit, 12rem);
           max-width: 100%;
           width: fit-content;
           gap: clamp(1rem, 3vw, 2rem);

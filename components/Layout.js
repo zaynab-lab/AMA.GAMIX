@@ -1,4 +1,5 @@
 import "@fontsource/roboto";
+
 export default function Layout({ children }) {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Layout({ children }) {
           overscroll-behavior: contain;
           -ms-overflow-style: none;
           scrollbar-width: none;
+          scroll-behavior: smooth;
         }
 
         *::-webkit-scrollbar {
