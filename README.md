@@ -1,2 +1,3 @@
-# AMA.GAMIX
+# zaps
+
 Created with CodeSandbox
