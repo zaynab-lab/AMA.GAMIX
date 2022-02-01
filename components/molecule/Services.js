@@ -54,7 +54,8 @@ export default function Services({ lang }) {
           text-shadow: 2px 2px 12px #129dd2;
         }
         .servicesContent {
-          max-width: 70rem;
+          width: 100%;
+          max-width: 60rem;
         }
         .servicesContainer {
           font-size: clamp(0.8rem, 4vw, 3rem);

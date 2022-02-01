@@ -3,13 +3,13 @@ import { styles } from "@/public/js/styles";
 import Link from "next/link";
 import WaButton from "@/components/atom/WaButton";
 
-export default function Footer() {
+export default function Footer({ lang }) {
   return (
     <>
       <div className="footer">
         <Link href="https://wa.me/+971505601624">
           <div className="footerWabtn">
-            <WaButton />
+            <WaButton lang={lang} />
           </div>
         </Link>
         <div className="footerlogo">

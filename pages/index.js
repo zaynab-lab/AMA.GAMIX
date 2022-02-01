@@ -18,7 +18,7 @@ export default function Index() {
       <Products lang={lang} />
       <Follow lang={lang} />
       <Services lang={lang} />
-      <Footer />
+      <Footer lang={lang} />
 
       <style global jsx>{`
         * {
