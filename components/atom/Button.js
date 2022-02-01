@@ -12,10 +12,10 @@ export default function Button({ name }) {
           background: #3498db;
           border-radius: 0.4rem;
           color: #ffffff;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           text-decoration: none;
           width: 100%;
-          padding: 0.3rem 1.6rem;
+          padding: 0.5rem 1.6rem;
           cursor: pointer;
         }
         .buttonItem:hover {

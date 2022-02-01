@@ -88,15 +88,18 @@ export default function Products({ lang }) {
 
         .productsContainer {
           display: grid;
-          grid-template-columns: repeat(auto-fit, 12rem);
+          grid-template-columns: repeat(
+            auto-fit,
+            clamp(11rem, calc(14vw + 1rem), 13rem)
+          );
           max-width: 100%;
           width: fit-content;
           gap: clamp(1rem, 3vw, 2rem);
           padding: 1.6rem 0rem;
-          overflow: hidden;
         }
         .imgContainer {
-          width: 10rem;
+          width: clamp(9rem, 12vw, 12rem);
+          height: clamp(9rem, 12vw, 12rem);
           overflow: hidden;
           border-radius: 0.8rem;
         }
@@ -114,7 +117,7 @@ export default function Products({ lang }) {
           background: white;
           cursor: pointer;
           border-radius: 0.8rem;
-          padding: 1rem;
+          padding: 0.6rem;
         }
         .loadMore {
           color: white;
