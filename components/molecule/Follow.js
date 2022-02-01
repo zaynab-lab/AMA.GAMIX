@@ -1,5 +1,5 @@
 import { styles } from "@/public/js/styles";
-import Insta from "@/public/img/Insta";
+import Insta from "@/public/js/Insta";
 import dictionary from "@/public/js/dictionary";
 
 export default function Follow({ lang }) {

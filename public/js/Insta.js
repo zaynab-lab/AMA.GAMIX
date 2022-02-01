@@ -13,6 +13,7 @@ export default function () {
           fill="url(#paint0_linear_251_139)"
         />
       </g>
+
       <defs>
         <filter
           id="filter0_d_251_139"
@@ -24,24 +25,31 @@ export default function () {
           color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
+
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
             result="hardAlpha"
           />
+
           <feOffset dy="4" />
+
           <feGaussianBlur stdDeviation="12" />
+
           <feComposite in2="hardAlpha" operator="out" />
+
           <feColorMatrix
             type="matrix"
             values="0 0 0 0 0.745098 0 0 0 0 0.129412 0 0 0 0 0.827451 0 0 0 0.5 0"
           />
+
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
             result="effect1_dropShadow_251_139"
           />
+
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -49,6 +57,7 @@ export default function () {
             result="shape"
           />
         </filter>
+
         <linearGradient
           id="paint0_linear_251_139"
           x1="158"
@@ -58,6 +67,7 @@ export default function () {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#B646DE" />
+
           <stop offset="1" stop-color="#6F21D3" />
         </linearGradient>
       </defs>
