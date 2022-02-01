@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const APP_NAME = "Altanoor ltd";
-const APP_DESCRIPTION = "world wide trading";
+const APP_NAME = "AMA Gamix";
+const APP_DESCRIPTION = "Network & PC Services";
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -47,7 +47,7 @@ export default class extends Document {
             }
           `}</style>
 
-          <title>presentation</title>
+          <title>AMA Gamix</title>
         </Head>
         <body>
           <Main />
