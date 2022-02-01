@@ -32,14 +32,14 @@ export default function FixIt() {
       </div>
       <style jsx>{`
         .fixItSection {
-          padding: 2rem;
+          padding: calc(2rem + 6vw);
           ${styles.flexAligncenter}
           ${styles.flexColumn};
-          gap: 2rem;
+          gap: calc(2rem + 3vw);
         }
         .issuesContainer {
           width: 100%;
-          max-width: 70rem;
+          max-width: 80rem;
           ${styles.flexAligncenter}
           ${styles.spaceEvenly}
         }

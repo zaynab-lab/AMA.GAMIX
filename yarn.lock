@@ -855,11 +855,6 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@fontsource/exo@4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/exo/-/exo-4.5.1.tgz#44f616be089309539000b9e27225b8527024ccb5"
-  integrity sha512-xtT7DSuFu3MX21Tf+rQfuBslwkjPkjFjLoqigktui7a5GiX18cFE1vsZ7FxHEtzVc/tvKp6OhJ1+GavqGB0L2w==
-
 "@fontsource/roboto@4.5.2":
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.2.tgz#98dd67e579984e255fac4315b496520d890ae989"

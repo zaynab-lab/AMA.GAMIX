@@ -8,8 +8,8 @@ export default function TopBar() {
       <div className="topBarContainer">
         <div className="barContainer">
           <div className="menuContainer">
-            <div>Products</div>
-            <div>Services</div>
+            <div className="menuItem">Products</div>
+            <div className="menuItem">Services</div>
           </div>
           <div
             className="switch"
@@ -27,7 +27,7 @@ export default function TopBar() {
         .menuContainer {
           ${styles.flexAligncenter}
           gap:clamp(1.2rem, 8vw, 3rem);
-          font-size: clamp(1.2rem, 4vw, 2rem);
+          font-size: clamp(1.1rem, 3vw, 1.8rem);
         }
         .barContainer {
           flex: 1 1;
@@ -59,6 +59,9 @@ export default function TopBar() {
         }
         .lang {
           ${lang === "En" ? "padding-left: 0.6rem;" : "padding-right: 0.6rem;"}
+        }
+        .menuItem {
+          cursor: pointer;
         }
       `}</style>
     </>

@@ -16,34 +16,43 @@ export default function Products() {
       <div className="productsComponent">
         <div className="productsComponentContent">
           <div className="title">Products</div>
-          <div className="productsContainer">
-            {products.slice(0, items).map((product, i) => (
-              <div key={i} className="product">
-                <div className="productItem">
-                  <div className="imgContainer">
-                    <img
-                      src={`/img/${product.img}.jpg`}
-                      alt=""
-                      width="100%"
-                      height="150px"
-                    />
-                  </div>
-                  {/* {product.name} */}
-                  <div className="ButtonContainer">
-                    <Button name="Order now" />
+          <div className="productsMainContainer">
+            <div className="productsContainer">
+              {products.slice(0, items).map((product, i) => (
+                <div key={i} className="product">
+                  <div className="productItem">
+                    <div className="imgContainer">
+                      <img
+                        src={`/img/${product.img}.jpg`}
+                        alt=""
+                        width="100%"
+                        height="150px"
+                      />
+                    </div>
+                    {/* {product.name} */}
+                    <div className="ButtonContainer">
+                      <Button name="Order now" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            {items <= products.length && (
-              <div
-                className="loadMore"
-                onClick={() => setItems((item) => item + 3)}
-              >
-                Load More
-              </div>
-            )}
+              ))}
+            </div>
           </div>
+          {items <= products.length ? (
+            <div
+              className="loadMore"
+              onClick={() => setItems((item) => item + 3)}
+            >
+              Load More
+            </div>
+          ) : (
+            <div
+              className="loadMore"
+              onClick={() => setItems((item) => item - 3)}
+            >
+              Show Less
+            </div>
+          )}
         </div>
       </div>
       <style jsx>{`
@@ -64,10 +73,14 @@ export default function Products() {
           font-size: clamp(2rem, 6vw, 3rem);
           text-shadow: 2px 2px 12px #129dd2;
         }
+        .productsMainContainer {
+          ${styles.flexBothcenter}
+        }
+
         .productsContainer {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          flex-wrap: wrap;
+          max-width: 100%;
           width: fit-content;
           gap: clamp(1rem, 3vw, 2rem);
           padding: 1.6rem 0rem;
@@ -95,8 +108,8 @@ export default function Products() {
           padding: 1rem;
         }
         .loadMore {
-          flex: 1 100%;
           color: white;
+          width: 100%;
           font-size: clamp(1.6rem, 3vw, 2rem);
           text-shadow: 1px 2px 3px #666;
           cursor: pointer;
