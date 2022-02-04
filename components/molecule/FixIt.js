@@ -2,9 +2,18 @@ import dictionary from "@/public/js/dictionary";
 import { styles } from "@/public/js/styles";
 
 const issues = [
-  { text: { En: "WiFi issues", Ar: "مشاكل الواي فاي" }, img: "wifi" },
-  { text: { En: "Hardware issues", Ar: "مشاكل القطع" }, img: "hardware" },
-  { text: { En: "Printer issues", Ar: "مشاكل الطابعة" }, img: "printer" }
+  {
+    text: { En: "WiFi issues", Ar: "مشاكل الواي فاي أو الإنترنت" },
+    img: "wifi"
+  },
+  {
+    text: { En: "Hardware issues", Ar: "مشاكل أجهزة الكمبيوتر" },
+    img: "hardware"
+  },
+  {
+    text: { En: "Printer issues", Ar: "مشاكل الطابعة الرقمية" },
+    img: "printer"
+  }
 ];
 
 export default function FixIt({ lang }) {

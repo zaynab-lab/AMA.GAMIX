@@ -3,7 +3,10 @@ import { styles } from "@/public/js/styles";
 
 const services = [
   {
-    text: { En: "PC repairing & maintinance", Ar: "اصلاح وصيانة الكمبيوترات" }
+    text: {
+      En: "PC repairing & maintinance",
+      Ar: "الدعم الفني والصيانة لأجهزة الحاسوب"
+    }
   },
   {
     text: {
@@ -11,7 +14,7 @@ const services = [
       Ar: "شبكات المنازل (واي فاي، طابعة،...)"
     }
   },
-  { text: { En: "Laptop Fixing", Ar: "تصليح لابتوبات" } },
+  { text: { En: "Laptop Fixing", Ar: "صيانة اللابتوب" } },
   {
     text: {
       En: "Upgrade and Update (Hardware & software)",
