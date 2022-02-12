@@ -2,13 +2,18 @@ import { styles } from "@/public/js/styles";
 import Button from "@/components/atom/Button";
 import { useState } from "react";
 import dictionary from "@/public/js/dictionary";
+import Link from "next/link";
+
 const products = [
-  { name: "router one", img: "image", code: "1" },
-  { name: "pink keyboard", img: "image", code: "2" },
-  { name: "earphones", img: "image", code: "3" },
-  { name: "printer", img: "image", code: "4" },
-  { name: "black keyboard", img: "image", code: "5" },
-  { name: "tp link", img: "image", code: "6" }
+  { name: "Headset", img: "Headset", code: "1" },
+  { name: "Keyboard", img: "Keyboard", code: "2" },
+  { name: "Monitor", img: "Monitor", code: "3" },
+  { name: "Mouse", img: "Mouse", code: "4" },
+  { name: "Printer", img: "Printer", code: "5" },
+  { name: "Wifi", img: "Wifi", code: "6" },
+  { name: "Set", img: "Set", code: "7" },
+  { name: "Alexa", img: "Alexa", code: "8" },
+  { name: "Desk", img: "Desk", code: "9" }
 ];
 export default function Products({ lang }) {
   const [items, setItems] = useState(3);
@@ -26,7 +31,7 @@ export default function Products({ lang }) {
                   <div className="productItem">
                     <div className="imgContainer">
                       <img
-                        src={`/img/${product.img}.jpg`}
+                        src={`/img/products/${product.img}.png`}
                         alt=""
                         width="100%"
                         height="150px"
@@ -34,13 +39,15 @@ export default function Products({ lang }) {
                     </div>
                     {/* {product.name} */}
                     <div className="ButtonContainer">
-                      <Button
-                        name={
-                          lang === "En"
-                            ? dictionary.order.En
-                            : dictionary.order.Ar
-                        }
-                      />
+                      <Link href="https://wa.me/+971505601624">
+                        <Button
+                          name={
+                            lang === "En"
+                              ? dictionary.order.En
+                              : dictionary.order.Ar
+                          }
+                        />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -102,6 +109,8 @@ export default function Products({ lang }) {
           height: clamp(9rem, 12vw, 12rem);
           overflow: hidden;
           border-radius: 0.8rem;
+          -webkit-box-shadow: 1px 1px 5px 2px ${styles.thirdColor};
+          box-shadow: 1px 1px 5px 2px ${styles.thirdColor};
         }
         .product {
           padding: 0.3rem;

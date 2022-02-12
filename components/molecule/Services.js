@@ -10,7 +10,7 @@ const services = [
   },
   {
     text: {
-      En: "Home network(WIFI, Printer...)",
+      En: "Home network (WIFI, Printer...)",
       Ar: "شبكات المنازل (واي فاي، طابعة،...)"
     }
   },
@@ -25,6 +25,18 @@ const services = [
     text: {
       En: "Providing various computer accessories",
       Ar: "توفير ملحقات الكمبيوتر المختلفة"
+    }
+  },
+  {
+    text: {
+      En: "App, web, and system development",
+      Ar: "تطوير تطبيقات ومواقع وأنظمة"
+    }
+  },
+  {
+    text: {
+      En: "Design and visual identity",
+      Ar: "تصميم وهوية بصرية"
     }
   }
 ];
