@@ -38,8 +38,8 @@ export default function Products({ lang }) {
                       />
                     </div>
                     {/* {product.name} */}
-                    <div className="ButtonContainer">
-                      <Link href="https://wa.me/+971505601624">
+                    <Link href="https://wa.me/+971505601624">
+                      <div className="ButtonContainer">
                         <Button
                           name={
                             lang === "En"
@@ -47,8 +47,8 @@ export default function Products({ lang }) {
                               : dictionary.order.Ar
                           }
                         />
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               ))}
