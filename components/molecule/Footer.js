@@ -12,6 +12,11 @@ export default function Footer({ lang }) {
             <WaButton lang={lang} />
           </div>
         </Link>
+        <div className="mail">
+          <a className="mail" href="mailto: admin@amagamix-store.com">
+            admin@amagamix-store.com
+          </a>
+        </div>
         <div className="footerlogo">
           <Logo />
         </div>
@@ -31,6 +36,9 @@ export default function Footer({ lang }) {
         .footerlogo {
           max-width: 30%;
           padding-top: 3vw;
+        }
+        .mail {
+          color: ${styles.secondaryColor};
         }
       `}</style>
     </>

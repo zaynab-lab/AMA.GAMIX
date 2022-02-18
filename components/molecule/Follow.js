@@ -7,17 +7,19 @@ export default function Follow({ lang }) {
     <>
       <div>
         <div className="followSction">
-          <div className="followContainer">
-            <div className="text">
-              <div className="textFU">
-                {lang === "En" ? dictionary.follow.En : dictionary.follow.Ar}
+          <a href="instagram://user?username=ama.gamix">
+            <div className="followContainer">
+              <div className="text">
+                <div className="textFU">
+                  {lang === "En" ? dictionary.follow.En : dictionary.follow.Ar}
+                </div>
+                <div className="textAMA">ama.gamix</div>
               </div>
-              <div className="textAMA"> ama.gamix</div>
+              <div className="FaInstagramItem">
+                <Insta />
+              </div>
             </div>
-            <div className="FaInstagramItem">
-              <Insta />
-            </div>
-          </div>
+          </a>
         </div>
       </div>
       <style jsx>{`
